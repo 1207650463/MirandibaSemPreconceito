@@ -1,0 +1,970 @@
+/* ===================================
+   CONFIGURAÇÕES
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+    color: #171717;
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ===================================
+   ACESSIBILIDADE
+=================================== */
+
+.pular-conteudo {
+    position: absolute;
+
+    top: -100px;
+    left: 10px;
+
+    background: #f1c40f;
+    color: #000;
+
+    padding: 10px 15px;
+
+    z-index: 9999;
+}
+
+.pular-conteudo:focus {
+    top: 10px;
+}
+
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+header {
+    background: #111111;
+
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    max-width: 1200px;
+
+    min-height: 75px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 35px;
+}
+
+.logo strong {
+    display: block;
+
+    font-size: 21px;
+}
+
+.logo small {
+    display: block;
+
+    color: #f1c40f;
+
+    font-size: 12px;
+}
+
+.menu {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f1c40f;
+}
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero {
+    min-height: 600px;
+
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080808,
+            #292929
+        );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 650px;
+
+    margin-left: max(
+        0px,
+        calc((100% - 1100px) / 2)
+    );
+}
+
+.cidade {
+    display: inline-block;
+
+    background: #f1c40f;
+
+    color: #111;
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(
+        48px,
+        8vw,
+        82px
+    );
+
+    line-height: 1;
+
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    color: #f1c40f;
+}
+
+.hero p {
+    font-size: 20px;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 23px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-danger {
+    background: #d62828;
+
+    color: white;
+}
+
+.btn-light {
+    background: white;
+
+    color: #111;
+}
+
+.hero-symbol {
+    margin-right: max(
+        0px,
+        calc((100% - 1100px) / 2)
+    );
+
+    text-align: center;
+}
+
+.circle {
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background: #f1c40f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 120px;
+
+    box-shadow:
+        0 0 0 15px
+        rgba(241, 196, 15, 0.1);
+}
+
+.hero-symbol p {
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+
+/* ===================================
+   SEÇÕES
+=================================== */
+
+.section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+.section-gray {
+    max-width: none;
+
+    background: #f4f4f4;
+
+    padding-left: max(
+        25px,
+        calc((100% - 1100px) / 2)
+    );
+
+    padding-right: max(
+        25px,
+        calc((100% - 1100px) / 2)
+    );
+}
+
+.section-title {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+}
+
+.section-title span {
+    color: #a00000;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #555;
+
+    font-size: 17px;
+}
+
+
+/* ===================================
+   CARDS
+=================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+
+    border-top: 5px solid #111;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ===================================
+   BUSCA
+=================================== */
+
+.search-box {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 16px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #111;
+}
+
+
+/* ===================================
+   LOCAIS
+=================================== */
+
+.locations {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.location-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    gap: 18px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-3px);
+}
+
+.location-icon {
+    font-size: 40px;
+}
+
+.location-card h3 {
+    margin-bottom: 7px;
+}
+
+.accessibility {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 5px 10px;
+
+    background: #e7f5e8;
+
+    color: #176b25;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.information {
+    margin-top: 30px;
+
+    padding: 18px;
+
+    background: #fff8d6;
+
+    border-left: 5px solid #f1c40f;
+}
+
+
+/* ===================================
+   DENÚNCIA
+=================================== */
+
+.complaint-section {
+    max-width: none;
+
+    background: #111;
+
+    color: white;
+
+    padding-left: max(
+        25px,
+        calc((100% - 1100px) / 2)
+    );
+
+    padding-right: max(
+        25px,
+        calc((100% - 1100px) / 2)
+    );
+}
+
+.section-title.light span {
+    color: #f1c40f;
+}
+
+.section-title.light p {
+    color: #ddd;
+}
+
+.complaint-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 45px;
+}
+
+.channels h3,
+.form-box h3 {
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.channel {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    background: #222;
+}
+
+.channel-icon {
+    font-size: 35px;
+}
+
+.channel h4 {
+    font-size: 20px;
+}
+
+.channel a {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    color: #f1c40f;
+
+    font-weight: bold;
+}
+
+
+/* ===================================
+   FORMULÁRIO
+=================================== */
+
+.form-box {
+    background: white;
+
+    color: #111;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.warning {
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    background: #fff4cc;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+form label {
+    display: block;
+
+    font-weight: bold;
+
+    margin: 14px 0 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 2px solid #111;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #b00020;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #850019;
+}
+
+
+/* ===================================
+   PASSOS
+=================================== */
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.step {
+    padding: 25px;
+
+    border-left: 4px solid #111;
+
+    background: #f7f7f7;
+}
+
+.step strong {
+    font-size: 35px;
+
+    color: #a00000;
+}
+
+.step h3 {
+    margin: 10px 0;
+}
+
+
+/* ===================================
+   RODAPÉ
+=================================== */
+
+footer {
+    background: #080808;
+
+    color: white;
+
+    padding: 45px 25px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-content h2 {
+    margin-bottom: 8px;
+}
+
+.footer-content h3 {
+    color: #f1c40f;
+}
+
+.copyright {
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* ===================================
+   ACESSIBILIDADE
+=================================== */
+
+.accessibility-tools {
+    position: fixed;
+
+    right: 15px;
+    bottom: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    z-index: 900;
+}
+
+.accessibility-tools button,
+#topo {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.2);
+}
+
+#topo {
+    position: fixed;
+
+    right: 15px;
+    bottom: 20px;
+
+    display: none;
+
+    font-size: 20px;
+}
+
+
+/* ===================================
+   MODO ALTO CONTRASTE
+=================================== */
+
+body.contraste {
+    background: #000;
+
+    color: #fff;
+}
+
+body.contraste .section-gray,
+body.contraste .card,
+body.contraste .location-card,
+body.contraste .step {
+    background: #111;
+
+    color: white;
+}
+
+body.contraste p {
+    color: #fff;
+}
+
+body.contraste .section-title p {
+    color: white;
+}
+
+body.contraste input,
+body.contraste textarea {
+    background: #000;
+
+    color: white;
+
+    border-color: white;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #111;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 20px 25px;
+
+        gap: 18px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-symbol {
+        margin: auto;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .locations {
+        grid-template-columns: 1fr;
+    }
+
+
+    .complaint-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .steps {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+
+        font-size: 90px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 31px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .location-card {
+        flex-direction: column;
+    }
+
+    .accessibility-tools {
+        right: 10px;
+    }
+
+  }
